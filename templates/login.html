@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+    <div class="card p-4 shadow" style="width: 400px;">
+        <h3 class="text-center text-primary">Login</h3>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="mb-3 d-flex align-items-center">
+                <label class="me-2" style="width: 100px;">Email</label>
+                {{ form.email(class="form-control") }}
+            </div>
+            <div class="mb-3 d-flex align-items-center">
+                <label class="me-2" style="width: 100px;">Password</label>
+                {{ form.password(class="form-control") }}
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+        <p class="mt-3 text-center">
+            Don't have an account? <a href="{{ url_for('register') }}">Register</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

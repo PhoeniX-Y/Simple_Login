@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="d-flex flex-column justify-content-center align-items-center text-center" style="height: 80vh;">
+    <h1 class="mb-4">Welcome to Simple Login</h1>
+    <div>
+        <a href="{{ url_for('login') }}" class="btn btn-primary me-2">Login</a>
+        <a href="{{ url_for('register') }}" class="btn btn-success">Register</a>
+    </div>
+</div>
+{% endblock %}
